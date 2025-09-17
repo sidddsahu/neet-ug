@@ -43,7 +43,7 @@ export default function HomeScreen() {
       border: "border-orange-300",
       accent: "text-orange-500",
       icon: "💉",
-      link: "/deck/drug-of-choice",
+      link: "deck-detail",
     },
   ];
 

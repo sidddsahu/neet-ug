@@ -17,7 +17,7 @@ export default function SpecialDecks() {
       border: "border-purple-300",
       gradient: "from-purple-50 to-purple-100",
       shadow: "shadow-purple-200/50",
-      link: "/subscription",
+      link: "/custom-deck",
     },
     {
       title: "Daily Capsules",

@@ -23,21 +23,42 @@ const Footer = () => {
     <div>
       {/* ---------- Bottom nav ---------- */}
       <div
-        className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm flex justify-around py-2 border-t"
-        style={{ backgroundColor: "var(--bg)" }}
+        className="fixed bottom-0 left-1/2 -translate-x-1/2
+                   w-[95%] max-w-sm flex justify-around py-2
+                   bg-white border border-gray-200 rounded-2xl
+                   shadow-xl z-50"
       >
-        {navItems.map(({ to, label, icon: Icon }) => (
-          <Link
-            key={to}
-            href={to}
-            className={`flex flex-col items-center ${
-              pathname === to ? "text-orange-500" : "text-gray-400"
-            }`}
-          >
-            <Icon className="w-6 h-6" />
-            <span className="text-xs">{label}</span>
-          </Link>
-        ))}
+        {navItems.map(({ to, label, icon: Icon }) => {
+          const isActive = pathname === to;
+          return (
+            <Link
+              key={to}
+              href={to}
+              className={`group flex flex-col items-center gap-0.5 transition-all ${
+                isActive ? "text-orange-500" : "text-gray-400"
+              }`}
+            >
+              <div
+                className={`flex items-center justify-center w-10 h-10 rounded-full transition-all ${
+                  isActive
+                    ? "bg-gradient-to-tr from-orange-500 to-orange-400 text-white shadow-md scale-105"
+                    : "group-hover:bg-gray-100"
+                }`}
+              >
+                <Icon className="w-6 h-6" />
+              </div>
+              <span
+                className={`text-[11px] font-medium ${
+                  isActive
+                    ? "text-orange-500"
+                    : "text-gray-500 group-hover:text-gray-700"
+                }`}
+              >
+                {label}
+              </span>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
