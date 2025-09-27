@@ -11,12 +11,12 @@ export default function PastYearQuestions() {
     {
       title: "INICET PYQS",
       cards: "7628 cards",
-      link: "/inicet-pyqs",
+      link: "/deck-detail",
     },
     {
       title: "NEET PG PYQS",
       cards: "1777 cards",
-      link: "/neet-pg-pyqs",
+      link: "/deck-detail",
     },
   ];
 

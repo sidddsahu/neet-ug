@@ -7,13 +7,13 @@ export default function BtrBasedDecks() {
   const router = useRouter();
 
   const btrDecks = [
-    { title: "Radiology - BTR", cards: "115 cards", icon: "📷", link: "/btr/radiology" },
-    { title: "Anatomy - BTR", cards: "626 cards", icon: "🫁", link: "/btr/anatomy" },
-    { title: "Biochemistry - BTR", cards: "1125 cards", icon: "🧪", link: "/btr/biochemistry" },
-    { title: "Microbiology - BTR", cards: "861 cards", icon: "🧬", link: "/btr/microbiology" },
-    { title: "SPM - BTR", cards: "1079 cards", icon: "📊", link: "/btr/spm" },
-    { title: "Anesthesia - BTR", cards: "554 cards", icon: "💉", link: "/btr/anesthesia" },
-    { title: "Dermatology - BTR", cards: "430 cards", icon: "🌿", link: "/btr/dermatology" },
+    { title: "Radiology - BTR", cards: "115 cards", icon: "📷", link: "/deck-detail" },
+    { title: "Anatomy - BTR", cards: "626 cards", icon: "🫁", link: "/deck-detail" },
+    { title: "Biochemistry - BTR", cards: "1125 cards", icon: "🧪", link: "/deck-detail" },
+    { title: "Microbiology - BTR", cards: "861 cards", icon: "🧬", link: "/deck-detail" },
+    { title: "SPM - BTR", cards: "1079 cards", icon: "📊", link: "/deck-detail" },
+    { title: "Anesthesia - BTR", cards: "554 cards", icon: "💉", link: "/deck-detail" },
+    { title: "Dermatology - BTR", cards: "430 cards", icon: "🌿", link: "/deck-detail" },
   ];
 
   return (

@@ -15,7 +15,7 @@ const Footer = () => {
   const navItems = [
     { to: "/", label: "Home", icon: HomeIcon },
     { to: "/deck", label: "Deck", icon: RectangleStackIcon },
-    { to: "/overall", label: "My Report", icon: DocumentTextIcon },
+    { to: "/login", label: "My Report", icon: DocumentTextIcon },
     { to: "/mores", label: "More", icon: EllipsisHorizontalIcon },
   ];
 
@@ -23,9 +23,9 @@ const Footer = () => {
     <div>
       {/* ---------- Bottom nav ---------- */}
       <div
-        className="fixed bottom-0 left-1/2 -translate-x-1/2
-                   w-[95%] max-w-sm flex justify-around py-2
-                   bg-white border border-gray-200 rounded-2xl
+        className="fixed bottom-0
+                   w-full flex justify-around py-2
+                   bg-white border border-gray-200
                    shadow-xl z-50"
       >
         {navItems.map(({ to, label, icon: Icon }) => {

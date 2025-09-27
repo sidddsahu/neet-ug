@@ -240,14 +240,22 @@ export default function DeckDetailsPage() {
         {filteredCards.map((card, idx) => (
           <article key={card.id} className="relative bg-white border border-[#e7dfe9] rounded-xl shadow-sm overflow-hidden">
             {/* Top small number badge */}
-            <div className="absolute -top-3 left-4 bg-white border border-[#ecdceb] rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold text-[#6f4f6a] z-10">
-              {card.id}.
-            </div>
 
-            {/* Card header (question) */}
-            <div className="bg-[#f5eff6] px-5 pt-6 pb-4 border-b border-[#efe6ef]">
-              <h3 className="text-[#443049] font-semibold leading-snug">{card.question}</h3>
-            </div>
+<div className="flex px-5 pt-6 pb-4 w-full gap-3 items-center bg-[#dddddd]">
+  {/* Card index circle */}
+  <div className="bg-white border border-[#ecdceb] rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold text-[#6f4f6a] z-10">
+    {card.id}.
+  </div>
+
+  {/* Card header (question) */}
+  <div className="flex-1 border-b border-[#efe6ef]">
+    <h3 className="text-[#443049] font-semibold leading-snug">
+      {card.question}
+    </h3>
+  </div>
+</div>
+
+
 
             {/* Card body (answer / image / details) */}
             <div className="px-5 py-4">

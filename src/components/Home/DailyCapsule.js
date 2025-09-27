@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation"; // ✅ Next.js navigation
+import Link from "next/link";
 
 const people = [
   { name: "A", color: "bg-gray-300" },
@@ -87,7 +88,7 @@ const CircleProgress = ({ percent = 0 }) => {
 };
 
 export default function DailyCapsule() {
-  const router = useRouter(); // ✅ Next.js hook
+  const router = useRouter();
 
   return (
     <div className="min-h-screen w-full bg-white flex items-center justify-center">
@@ -96,9 +97,8 @@ export default function DailyCapsule() {
         {/* Top bar */}
         <div className="bg-purple-700 text-white mb-4">
           <div className="flex items-center gap-3 px-4 py-3">
-            {/* Back button */}
             <button
-              onClick={() => router.back()} // ✅ Next.js back navigation
+              onClick={() => router.back()}
               className="bg-white/15 hover:bg-white/25 transition-colors rounded-full p-2"
             >
               <BackIcon className="w-5 h-5 text-white" />
@@ -107,7 +107,7 @@ export default function DailyCapsule() {
             <h1 className="flex-1 text-center text-lg font-semibold -ml-10">
               Daily Capsule
             </h1>
-            <div className="w-9" /> {/* spacer to balance back button */}
+            <div className="w-9" /> {/* spacer */}
           </div>
         </div>
 
@@ -197,8 +197,8 @@ export default function DailyCapsule() {
                   )}
                 </div>
 
-                {/* Row card */}
-                <button className="flex-1 pl-1 w-full">
+                {/* Row card with link */}
+                <Link href="/daily-capsule-detail" className="flex-1 pl-1 w-full">
                   <div className="w-full border-b border-gray-200 py-4">
                     <div className="flex items-center justify-between">
                       <div>
@@ -216,12 +216,12 @@ export default function DailyCapsule() {
                       <ChevronRight className="w-5 h-5 text-purple-700" />
                     </div>
                   </div>
-                </button>
+                </Link>
               </div>
             ))}
           </div>
 
-          {/* Bottom safe area like iOS home bar */}
+          {/* Bottom safe area */}
           <div className="h-8" />
           <div className="mx-auto mb-3 w-28 h-[5px] rounded-full bg-gray-200" />
         </div>
